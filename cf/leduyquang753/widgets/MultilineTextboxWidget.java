@@ -715,7 +715,7 @@ public class MultilineTextboxWidget extends Widget implements IRenderable, IGuiE
 	}
 	
 	public int getScrollbarHeight() {
-		return (int)(Math.min(1, (double)(height-2*padding)/(double)(layoutCache.size()*font.FONT_HEIGHT))*(height-4));
+		return Math.max(3, (int)(Math.min(1, (double)(height-2*padding)/(double)(layoutCache.size()*font.FONT_HEIGHT))*(height-4)));
 	}
 	
 	public int getScrollbarPosition() {
